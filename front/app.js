@@ -80,7 +80,7 @@ app.get('/show', function (req, res) {
 app.get('/delete', function (req, res) {
 
     axios
-        .put('http://localhost:3002/api/delete', {id:req.query.id })
+        .delete('http://localhost:3002/api/delete?id='+req.query.id, )
         .then(resuslt => {
             res.redirect('/')
         })

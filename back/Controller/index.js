@@ -37,7 +37,7 @@ function update(id,data){
 
 function supprimer(id){
 
-    ad.deleteOne(ObjectId(id))
+    ad.deleteOne({_id:ObjectId(id)})
         .then(result => {
          //   console.log(result)
             return result

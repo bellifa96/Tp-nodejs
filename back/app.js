@@ -54,7 +54,7 @@ app.put('/api/update', function (req, res) {
 })
 
 app.delete('/api/delete', function (req, res) {
-    console.log(req.query.id+'zzz')
+    console.log(req.query.id)
     res.send(ad.supprimer(req.query.id))
 })
 
