@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 app.listen(3002, function() {
 
-    console.log('listening on 3000')
+    console.log('listening on 3002')
 })
 
 
