@@ -1,0 +1,66 @@
+
+<%- include('./nav.html') %>
+
+
+<table style="width:80%">
+    <thead>
+    <tr>
+        <th>id </th>
+        <th> titre</th>
+        <th> description</th>
+        <th> adresse</th>
+        <th> cp</th>
+        <th> ville</th>
+        <th>  prix </th>
+        <th>action </th>
+
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <% for(var i = 0; i < items.length; i++) {%>
+
+        <tr>
+            <td><%= items[i]._id %></td>
+
+            <td><%= items[i].titre %></td>
+            <td><%= items[i].description %></td>
+            <td><%= items[i].addresse %></td>
+            <td><%= items[i].code_postal %></td>
+            <td><%= items[i].ville %></td>
+            <td><%= items[i].prix %></td>
+            <td>
+                <a href="/form/update?id=<%= items[i]._id %>"> modifier</a>
+                <a href="">supprimer</a>
+                <a href=""> show  </a>
+            </td>
+
+
+        </tr>
+
+    <% } %>
+
+    </tbody>
+</table>
+
+<style>
+    table{
+        margin-right: auto;
+        margin-left: auto;
+    }
+    table,
+    td {
+        border: 1px solid #333;
+        text-align: center;
+    }
+
+    thead {
+        background-color: #333;
+        color: #fff;
+    }
+
+
+
+
+</style>

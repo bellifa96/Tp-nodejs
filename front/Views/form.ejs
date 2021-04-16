@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MY APP</title>
+</head>
+<body>
+<ul>
+    <li><a href="/">Annonces</a></li>
+
+
+</ul>
+<h1>ajouter une annonce </h1>
+
+
+<form action="/update?id=<%= item._id%>" method="POST">
+    <input value="<%= item.titre%>" type="text" required placeholder="titre" name="titre" >
+    <input value="<%= item.description%>" type="text" required placeholder="description" name="description">
+    <input value="<%= item.addresse%>" type="text" required placeholder="adresse" name="adresse">
+    <input value="<%= item.code_postal%>" type="text" required placeholder="code postal" name="code_postal">
+    <input value="<%= item.ville%>" type="text" required placeholder="ville" name="ville">
+    <input value="<%= item.prix%>" type="number" required placeholder="prix" name="prix">
+
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
+
