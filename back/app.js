@@ -50,11 +50,12 @@ app.get('/api/show', function (req, res) {
 
 app.put('/api/update', function (req, res) {
    // console.log(req.body.data,req.body.id)
-    ad.update(req.body.id,req.body.data)
+   res.send( ad.update(req.body.id,req.body.data) )
 })
 
 app.delete('/api/delete', function (req, res) {
-    ad.supprimer(req.id)
+    console.log(req.query.id+'zzz')
+    res.send(ad.supprimer(req.query.id))
 })
 
 app.post('/api/new', (req, res) => {

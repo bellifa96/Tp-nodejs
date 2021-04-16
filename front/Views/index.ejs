@@ -26,14 +26,14 @@
 
             <td><%= items[i].titre %></td>
             <td><%= items[i].description %></td>
-            <td><%= items[i].addresse %></td>
+            <td><%= items[i].adresse %></td>
             <td><%= items[i].code_postal %></td>
             <td><%= items[i].ville %></td>
             <td><%= items[i].prix %></td>
             <td>
                 <a href="/form/update?id=<%= items[i]._id %>"> modifier</a>
-                <a href="">supprimer</a>
-                <a href=""> show  </a>
+                <a href="/delete?id=<%= items[i]._id %>">supprimer</a>
+                <a href="/show?id=<%= items[i]._id %>"> show  </a>
             </td>
 
 

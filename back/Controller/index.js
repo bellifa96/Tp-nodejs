@@ -26,7 +26,7 @@ function create (body){
 
 function update(id,data){
 
-    ad.findOneAndUpdate(ObjectId(id),{$set:data})
+    ad.findOneAndUpdate({_id:ObjectId(id)},{$set:data})
         .then(result => {
             console.log(result)
             return result
@@ -37,9 +37,9 @@ function update(id,data){
 
 function supprimer(id){
 
-    ad.findOneAndRemove(id)
+    ad.deleteOne(ObjectId(id))
         .then(result => {
-            console.log(result)
+         //   console.log(result)
             return result
         })
 

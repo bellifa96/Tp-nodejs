@@ -67,3 +67,24 @@ app.get('/form/update', function (req, res) {
         .catch(err => console.error(err));
 
 })
+
+app.get('/show', function (req, res) {
+
+    fetch("http://localhost:3002/api/show?id="+req.query.id)
+        .then(result => result.json())
+        .then(json =>     res.render(__dirname + '/Views/show.ejs',{item : json}))
+        .catch(err => console.error(err));
+
+})
+
+app.get('/delete', function (req, res) {
+
+    axios
+        .put('http://localhost:3002/api/delete', {id:req.query.id })
+        .then(resuslt => {
+            res.redirect('/')
+        })
+        .catch(error => {
+            console.error(error)
+        })
+})
